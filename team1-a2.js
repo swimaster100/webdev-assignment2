@@ -1,4 +1,27 @@
 //$.fn.hexed = function() {
+
+
+
+(function ($) {
+    $.fn.hexed = function(difficulty, rounds) {
+        //To add in the colors, sliders, buttons, etc for the game
+        $('#hexgame').html("<div id='container'></div><div id='results'></div>");
+        var title = '<h1>Hexed</h1>';
+     	var slider = "<div id='red'></div><div id='green'></div><div id='blue'></div>";
+        var colors = '<div id="colors" class="ui-widget-content ui-corner-all"></div>';
+        var buttons = '<button type="button" id="calculate" >Calculate!</button> <button type="button" id="next" >Next!</button>';
+        var hexv = '<div id="hexv"><input type="text" id="hex_red" class="value" /><input type="text" id="hex_green" class="value" /><input type="text" id="hex_blue" class="value" /></div>';
+        $('#container').html(title + slider + colors + buttons + hexv);
+        $('#results').html('<div id="recent"></div><div id="scores"></div>');
+        var result = "<h2>Most Recent Results</h2>";
+        var color1 = '<div class="color1"><h3>The Actual Color:</h3><div id="oldcolor" class="ui-widget-content ui-corner-all"></div></div>';
+        var color2 = '<div class="color2"><h3>Your Color:</h3><div id="newcolor" class="ui-widget-content ui-corner-all"></div></div>';
+        var colorpercent = '<div id="colorpercent"></div>'
+        $('#recent').html(result + color1 + color2 + colorpercent);
+        var scoreshtml = '<h2 id="currentGame"></h2><ul id="listScores"></ul>';
+        $('#scores').html(scoreshtml);
+        
+    }
 $(function(){
   $( "#red, #green, #blue" ).slider({
     orientation: "horizontal",
