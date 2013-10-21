@@ -1,7 +1,7 @@
 (function ($) {
     $.fn.hexed = function(difficulty, rounds) {
         //To add in the colors, sliders, buttons, etc for the game
-        $('#thegame').html("<div id='container'></div><div id='results'></div>");
+        $('#hexgame').html("<div id='container'></div><div id='results'></div>");
         var title = '<h1>Hexed</h1>';
         var slider = "<div id='red'></div><div id='green'></div><div id='blue'></div>";
         var colors = '<div id="swatch" class="ui-widget-content ui-corner-all"></div>';
