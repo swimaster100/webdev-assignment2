@@ -2,7 +2,7 @@
 
 
 
-(function ($) {
+$(function () {
     $.fn.hexed = function(difficulty, rounds) {
         //To add in the colors, sliders, buttons, etc for the game
         $('#hexgame').html("<div id='container'></div><div id='results'></div>");
